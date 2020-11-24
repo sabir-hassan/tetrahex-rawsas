@@ -8,7 +8,9 @@ interface Props {
 
 const Archives: React.FC<Props> = ({ data }: Props) => {
   const list = []
+  console.log(pathPrefix)
   for (const year in data) {
+    console.log(`${pathPrefix}${year}`)
     list.unshift(
       <a key={year} href={`${pathPrefix}${year}`}>
         {year} ({data[year]})
